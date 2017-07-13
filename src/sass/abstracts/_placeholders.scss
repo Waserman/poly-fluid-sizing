@@ -1,0 +1,51 @@
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+@import '../base/typography';
+
+// ========================================================= //
+// ========== BOT SPEECH BUBBLE COMPONENT (DIGI-1) =========//
+%font-base {
+  $map: (640px: 17px, 1920px: 28px);
+  @include poly-fluid-sizing('font-size', $map);
+}
+
+%bot-typed-title {
+  @extend %font-base;  
+  color: $text-white;
+  // line-height: 34px;
+}
+
+%bot-regular-content {
+  @extend %font-base;
+  // line-height: 34px;
+}
+
+%bot-purple-content {
+  @extend %font-base;
+  // line-height: 34px;
+}
+
+%bot-link {
+  @extend %font-base;
+  color: $link-light-blue;
+  // line-height: 31px;
+}
+
+%bot-responsive-padding {
+  @include poly-fluid-sizing('padding-top', (640px: 8.5px, 1920px: 25px));
+  @include poly-fluid-sizing('padding-bottom',(640px: 8.5px, 1920px: 25px));
+  @include poly-fluid-sizing('padding-left',(640px: 17px, 1920px: 25px));
+  @include poly-fluid-sizing('padding-right',(640px: 12.5px, 1920px: 25px));
+}
+
+// ========================================================= //
+
+%user-responsive-padding {
+  @include poly-fluid-sizing('padding-top', (640px: 8.5px, 1920px: 17px));
+  @include poly-fluid-sizing('padding-bottom', (640px: 8.5px, 1920px: 17px));
+  @include poly-fluid-sizing('padding-left', (640px: 12.5px, 1920px: 25px));
+  @include poly-fluid-sizing('padding-right', (640px: 17px, 1920px: 34px));
+}
+
+// ========================================================= //

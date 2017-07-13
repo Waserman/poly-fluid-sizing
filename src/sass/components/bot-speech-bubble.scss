@@ -1,0 +1,68 @@
+@import '../base';
+.bubble-container {
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  direction: rtl; 
+}
+
+.bot-speech {
+  @include poly-fluid-sizing('max-width', (640px: 226.5px, 1920px: 719px));
+  @include poly-fluid-sizing('min-height', (640px: 12.5px, 1920px: 25px));
+  background: $bg-white;
+  border-radius: 10px;
+  position: relative;
+  filter: drop-shadow( 2px 2px 3px rgba(0, 0, 0, 0.4));
+}
+
+.sharptip {
+  display: none;
+  z-index: 1;
+  position: relative;
+  right: 14px;
+  top: -6px;
+}
+
+.bot-speech__title {
+  @extend %bot-typed-title;
+  @extend %bot-responsive-padding;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: $bg-white;
+  &.warning {
+    background: $warning-red;
+  }
+  &.special {
+    background: $special-purple;
+  }
+}
+
+.bot-speech__content {
+  @extend %bot-regular-content;
+  @extend %bot-responsive-padding;
+  color: $text-purple;
+  &.special,
+  &.warning {
+    color: $text-primary;
+  }
+}
+
+.bot-speech__link {
+  border-top: 1px solid rgb(225, 225, 226);
+  @extend %bot-responsive-padding;
+  a {
+    @extend %bot-link;
+  }
+}
+
+.decoration {
+  @include poly-fluid-sizing('height', (640px: 22.5px, 1920px: 45px));
+  @include poly-fluid-sizing('width', (640px: 19.5px, 1920px: 39px));
+  @include poly-fluid-sizing('bottom', (640px: -6px, 1920px: -12px));
+  @include poly-fluid-sizing('left', (640px: -10px, 1920px: -20px));
+  position: absolute;
+}
