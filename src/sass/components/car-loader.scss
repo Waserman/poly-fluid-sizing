@@ -1,7 +1,0 @@
-@import '../base';
-.loading-car-container {
-    text-align: center;
-}
-.car-loader {
-    @include poly-fluid-sizing('width', (640px: 475px, 1920px: 700px));
-}
